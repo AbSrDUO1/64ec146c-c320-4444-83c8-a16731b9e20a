@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import NavbarStyleApple from '@/components/navbar/NavbarStyleApple/NavbarStyleApple';
 import HeroBillboard from '@/components/sections/hero/HeroBillboard';
@@ -7,6 +7,7 @@ import FeatureCardOne from '@/components/sections/feature/FeatureCardOne';
 import ProductCardTwo from '@/components/sections/product/ProductCardTwo';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseReveal from '@/components/sections/footer/FooterBaseReveal';
+import { Star } from 'lucide-react';
 
 const assetMap = [{"id":"hero-image","url":"https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_346q1PwyWBLFgxn5R5gWYFVRO0Y/tmp/pizzeria-interior-1760908602319-d65010dc.jpg","alt":"pizzeria interior"},{"id":"about-image","url":"https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_346q1PwyWBLFgxn5R5gWYFVRO0Y/tmp/pizza-preparation-1760908607317-d68a8207.jpg","alt":"pizza preparation"},{"id":"feature-1","url":"https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_346q1PwyWBLFgxn5R5gWYFVRO0Y/tmp/wood-fired-pizza-1760908609749-60b9b620.jpg","alt":"wood fired pizza"},{"id":"feature-2","url":"https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_346q1PwyWBLFgxn5R5gWYFVRO0Y/tmp/fresh-ingredients-1760908612271-ffed128c.jpg","alt":"fresh ingredients"},{"id":"product-1","url":"https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_346q1PwyWBLFgxn5R5gWYFVRO0Y/tmp/pepperoni-pizza-1760908616150-a1716916.jpg","alt":"pepperoni pizza"},{"id":"product-2","url":"https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_346q1PwyWBLFgxn5R5gWYFVRO0Y/tmp/vegetable-pizza-1760908622823-472194e1.jpg","alt":"vegetable pizza"},{"id":"product-3","url":"https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_346q1PwyWBLFgxn5R5gWYFVRO0Y/tmp/cheese-pizza-1760908626554-21e35518.jpg","alt":"cheese pizza"},{"id":"team-member","url":"https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_346q1PwyWBLFgxn5R5gWYFVRO0Y/tmp/chef-portrait-1760908629812-d01bb28e.jpg","alt":"chef portrait"},{"id":"testimonial","url":"https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_346q1PwyWBLFgxn5R5gWYFVRO0Y/tmp/happy-customer-in-restaurant-1760908632941-8fd146e5.jpg","alt":"happy customer in restaurant"},{"id":"contact-image","url":"https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_346q1PwyWBLFgxn5R5gWYFVRO0Y/tmp/pizzeria-ambiance-1760908636305-6fad17c3.jpg","alt":"pizzeria ambiance"}];
 
@@ -41,7 +42,7 @@ export default function Home() {
         <div className="mx-auto px-4 md:px-6">
           <SplitAbout
             bulletPoints={[
-              { title: "Authentic Recipes", description: "Passed down through generations", icon: "Star" },
+              { title: "Authentic Recipes", description: "Passed down through generations", icon: Star },
               { title: "Fresh Ingredients", description: "Locally sourced and organic" }
             ]}
             imageSrc={assetMap.find(a => a.id === "about-image")?.url}
